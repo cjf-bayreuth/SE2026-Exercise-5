@@ -32,11 +32,4 @@ mvn spring-boot:run
 mvn test
 ```
 
-## Suggested classroom flow
 
-1. Run the app.
-2. Call the endpoints.
-3. Trace request flow through controller, service, and repository.
-4. Extend the repository data.
-5. Add a new endpoint.
-6. Optionally migrate to H2 and Spring Data JPA.
