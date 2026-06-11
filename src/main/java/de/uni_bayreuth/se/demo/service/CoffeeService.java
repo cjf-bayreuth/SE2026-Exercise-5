@@ -27,4 +27,6 @@ public class CoffeeService {
     public List<Coffee> getAccessibleCoffees() {
         return coffeeRepository.findAccessible();
     }
+
+    public List<Coffee> getReturnPoints() { return coffeeRepository.findReturnPoint(); }
 }

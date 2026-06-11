@@ -33,4 +33,7 @@ public class CoffeeController {
     public List<Coffee> getAccessibleCoffees() {
         return coffeeService.getAccessibleCoffees();
     }
+
+    @GetMapping("/returnpoint")
+    public List<Coffee> getReturnPointCoffees() {return coffeeService.getReturnPoints(); }
 }
