@@ -12,7 +12,8 @@ public class CoffeeRepository {
     private final List<Coffee> coffees = List.of(
             new Coffee(1L, "Campus Cafe", 2.50, true),
             new Coffee(2L, "Library Coffee", 2.00, false),
-            new Coffee(3L, "Botanical Beans", 3.20, true)
+            new Coffee(3L, "Botanical Beans", 3.20, true),
+            new Coffee(4L, "Cafebar 8tto Grammi", 4.20, false)
     );
 
     public List<Coffee> findAll() {
