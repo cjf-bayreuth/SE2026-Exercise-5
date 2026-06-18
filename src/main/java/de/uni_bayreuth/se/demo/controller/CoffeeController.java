@@ -2,10 +2,7 @@ package de.uni_bayreuth.se.demo.controller;
 
 import de.uni_bayreuth.se.demo.model.Coffee;
 import de.uni_bayreuth.se.demo.service.CoffeeService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -36,4 +33,9 @@ public class CoffeeController {
 
     @GetMapping("/returnpoint")
     public List<Coffee> getReturnPointCoffees() {return coffeeService.getReturnPoints(); }
+
+    @PutMapping("/{name}")
+    public Coffee updateCoffeeByName(@PathVariable String name, @RequestBody Coffee coffee) {
+        return coffeeService.updateCoffeeByName(name, coffee);
+    }
 }

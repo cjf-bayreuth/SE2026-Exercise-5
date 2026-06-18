@@ -1,5 +1,6 @@
 package de.uni_bayreuth.se.demo.service;
 
+import de.uni_bayreuth.se.demo.controller.BadRequestException;
 import de.uni_bayreuth.se.demo.model.Coffee;
 import de.uni_bayreuth.se.demo.repository.CoffeeRepository;
 import org.springframework.stereotype.Service;
@@ -29,4 +30,18 @@ public class CoffeeService {
     }
 
     public List<Coffee> getReturnPoints() { return coffeeRepository.findReturnPoint(); }
+
+    public Coffee updateCoffeeByName(String name, Coffee coffee) {
+        if (coffee.name().trim().length() == 0) {
+            throw new BadRequestException("Coffee shop name must not be empty");
+        }
+        if (coffee.price() <= 0) {
+            throw new BadRequestException("Coffee shop price must be greater than 0");
+        }
+        Coffee c = coffeeRepository.updateCoffee(name, coffee);
+        if (c == null) {
+            throw new IllegalArgumentException("Coffee shop not found: " + name);
+        }
+        return c;
+    }
 }
