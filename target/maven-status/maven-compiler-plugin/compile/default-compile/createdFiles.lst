@@ -1,0 +1,7 @@
+de\uni_bayreuth\se\demo\DemoApplication.class
+de\uni_bayreuth\se\demo\repository\CoffeeRepository.class
+de\uni_bayreuth\se\demo\service\CoffeeService.class
+de\uni_bayreuth\se\demo\controller\CoffeeController.class
+de\uni_bayreuth\se\demo\controller\GlobalExceptionHandler.class
+de\uni_bayreuth\se\demo\controller\BadRequestException.class
+de\uni_bayreuth\se\demo\model\Coffee.class
